@@ -74,17 +74,21 @@ public class RegistrarActividades extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jTextFieldCodigoTrabajador = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jComboBoxIdioma = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(42, 62, 169));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelRegistrarActividades.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelRegistrarActividades.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRegistrarActividades.setText("REGISTRAR ACTIVIDADES");
+        jPanel2.add(jLabelRegistrarActividades, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/atras.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -92,27 +96,9 @@ public class RegistrarActividades extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 23, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel1)
-                .addGap(125, 125, 125)
-                .addComponent(jLabelRegistrarActividades)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelRegistrarActividades)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18))
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 618, 64));
 
         jPanelGuardar.setBackground(new java.awt.Color(42, 62, 169));
         jPanelGuardar.setPreferredSize(new java.awt.Dimension(170, 49));
@@ -129,31 +115,19 @@ public class RegistrarActividades extends javax.swing.JFrame {
                 jPanelGuardarMouseExited(evt);
             }
         });
+        jPanelGuardar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelGuardar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabelGuardar.setForeground(new java.awt.Color(255, 255, 255));
         jLabelGuardar.setText("Guardar");
+        jPanelGuardar.add(jLabelGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 72, 27));
 
-        javax.swing.GroupLayout jPanelGuardarLayout = new javax.swing.GroupLayout(jPanelGuardar);
-        jPanelGuardar.setLayout(jPanelGuardarLayout);
-        jPanelGuardarLayout.setHorizontalGroup(
-            jPanelGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGuardarLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
-                .addComponent(jLabelGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
-        );
-        jPanelGuardarLayout.setVerticalGroup(
-            jPanelGuardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGuardarLayout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
-                .addComponent(jLabelGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jPanel1.add(jPanelGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 481, -1, 43));
 
         jLabelNombreUser.setBackground(new java.awt.Color(0, 0, 0));
         jLabelNombreUser.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabelNombreUser.setText("USER");
+        jPanel1.add(jLabelNombreUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 110, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -210,7 +184,7 @@ public class RegistrarActividades extends javax.swing.JFrame {
         });
         jPanelP.add(jTextFieldDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 138, 150, 79));
 
-        jPanel3.add(jPanelP, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 83, 390, 240));
+        jPanel3.add(jPanelP, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 83, 390, 230));
 
         jLabelNombreTrabajador.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabelNombreTrabajador.setText("Nombre trabajador");
@@ -235,43 +209,18 @@ public class RegistrarActividades extends javax.swing.JFrame {
         });
         jPanel3.add(jTextFieldCodigoTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 100, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/toma-de-decisionesN.png"))); // NOI18N
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 144, -1, 325));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabelNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel2)))
-                .addContainerGap(103, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanelGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(219, 219, 219))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addGap(2, 2, 2)
-                .addComponent(jLabelNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/toma-de-decisionesN.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+
+        jComboBoxIdioma.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "Inglés" }));
+        jComboBoxIdioma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxIdiomaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBoxIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 502, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -340,6 +289,11 @@ public class RegistrarActividades extends javax.swing.JFrame {
         new indexSupervisor(user, idiomaSistema).setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void jComboBoxIdiomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxIdiomaActionPerformed
+        String itemSeleccionado = jComboBoxIdioma.getSelectedItem().toString();
+        cambiarIdioma(itemSeleccionado);
+    }//GEN-LAST:event_jComboBoxIdiomaActionPerformed
+
     public void cambiarIdioma(String idioma) {
         gestionIdiomas = new GestionIdiomas(idioma);
         jLabelRegistrarActividades.setText(gestionIdiomas.getProperty("registrar_actividades").toUpperCase());
@@ -361,6 +315,7 @@ public class RegistrarActividades extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBoxActividad;
+    private javax.swing.JComboBox<String> jComboBoxIdioma;
     private javax.swing.JComboBox<String> jComboBoxPrioridad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;

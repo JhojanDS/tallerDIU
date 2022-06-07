@@ -28,6 +28,7 @@ public class indexTrabajador extends javax.swing.JFrame {
         initComponents();
 
         this.user = user;
+        System.out.println(this.user);
         this.idiomaSistema=idiomaSistema;
         this.jLabelNombreUser.setText(user.getNombre().toUpperCase());
         cambiarIdioma(idiomaSistema);
@@ -54,6 +55,7 @@ public class indexTrabajador extends javax.swing.JFrame {
         jPanelConsultas = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabelConsultas = new javax.swing.JLabel();
+        jComboBoxIdioma = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -61,16 +63,20 @@ public class indexTrabajador extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(42, 62, 169));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelBienvenido.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelBienvenido.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBienvenido.setText("BIENVENIDO");
+        jPanel2.add(jLabelBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 19, -1, -1));
 
         jLabelNombreUser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelNombreUser.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNombreUser.setText("USER");
+        jPanel2.add(jLabelNombreUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 19, 153, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/toma-de-decisiones.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/empleadoB.png"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 15, 45, -1));
 
         jLabelSalir.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
@@ -79,44 +85,12 @@ public class indexTrabajador extends javax.swing.JFrame {
                 jLabelSalirMouseClicked(evt);
             }
         });
+        jPanel2.add(jLabelSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 19, -1, -1));
 
         jLabelLogout.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabelLogout.setForeground(new java.awt.Color(255, 255, 255));
         jLabelLogout.setText("Salir");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelBienvenido)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelSalir)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelLogout)
-                .addGap(24, 24, 24))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabelSalir)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelNombreUser)
-                            .addComponent(jLabelBienvenido)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        jPanel2.add(jLabelLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(471, 15, -1, 28));
 
         jLabelSeleccionaAccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabelSeleccionaAccion.setText("Selecciona una accion a realizar:");
@@ -136,58 +110,55 @@ public class indexTrabajador extends javax.swing.JFrame {
                 jPanelConsultasMouseExited(evt);
             }
         });
+        jPanelConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lupa.png"))); // NOI18N
+        jPanelConsultas.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 11, -1, 27));
 
-        jLabelConsultas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabelConsultas.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabelConsultas.setForeground(new java.awt.Color(255, 255, 255));
         jLabelConsultas.setText("Consultas");
+        jPanelConsultas.add(jLabelConsultas, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 11, 72, 27));
 
-        javax.swing.GroupLayout jPanelConsultasLayout = new javax.swing.GroupLayout(jPanelConsultas);
-        jPanelConsultas.setLayout(jPanelConsultasLayout);
-        jPanelConsultasLayout.setHorizontalGroup(
-            jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelConsultasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addGap(28, 28, 28)
-                .addComponent(jLabelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-        jPanelConsultasLayout.setVerticalGroup(
-            jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelConsultasLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
+        jComboBoxIdioma.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "Inglés" }));
+        jComboBoxIdioma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxIdiomaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabelSeleccionaAccion)
-                        .addGap(145, 145, 145))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(175, 175, 175))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabelSeleccionaAccion)
+                                .addGap(145, 145, 145))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(175, 175, 175))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jComboBoxIdioma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
                 .addComponent(jLabelSeleccionaAccion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(12, 12, 12)
+                .addComponent(jComboBoxIdioma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -195,9 +166,9 @@ public class indexTrabajador extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,8 +194,13 @@ public class indexTrabajador extends javax.swing.JFrame {
 
     private void jPanelConsultasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelConsultasMouseClicked
         this.dispose();
-        new ConsultasSupervisor(user, idiomaSistema).setVisible(true);
+        new ConsultasTrabajador(user, idiomaSistema).setVisible(true);
     }//GEN-LAST:event_jPanelConsultasMouseClicked
+
+    private void jComboBoxIdiomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxIdiomaActionPerformed
+        String itemSeleccionado = jComboBoxIdioma.getSelectedItem().toString();
+        cambiarIdioma(itemSeleccionado);
+    }//GEN-LAST:event_jComboBoxIdiomaActionPerformed
 
     public void cambiarIdioma(String idioma) {
         gestionIdiomas = new GestionIdiomas(idioma);
@@ -239,6 +215,7 @@ public class indexTrabajador extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBoxIdioma;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelBienvenido;

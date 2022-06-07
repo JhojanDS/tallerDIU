@@ -57,23 +57,29 @@ public class indexSupervisor extends javax.swing.JFrame {
         jPanelConsultas = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabelConsultas = new javax.swing.JLabel();
+        jComboBoxIdioma = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(42, 62, 169));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelBienvenido.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelBienvenido.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBienvenido.setText("BIENVENIDO");
+        jPanel2.add(jLabelBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
         jLabelNombreUser.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabelNombreUser.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNombreUser.setText("USER");
+        jPanel2.add(jLabelNombreUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 153, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/toma-de-decisiones.png"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 15, 45, -1));
 
         jLabelSalir.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
@@ -82,47 +88,18 @@ public class indexSupervisor extends javax.swing.JFrame {
                 jLabelSalirMouseClicked(evt);
             }
         });
+        jPanel2.add(jLabelSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 19, -1, -1));
 
         jLabelLogout.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabelLogout.setForeground(new java.awt.Color(255, 255, 255));
         jLabelLogout.setText("Salir");
+        jPanel2.add(jLabelLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 15, -1, 28));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(jLabelBienvenido)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelSalir)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelLogout)
-                .addGap(24, 24, 24))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabelSalir)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelNombreUser)
-                            .addComponent(jLabelBienvenido)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabelLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 523, 73));
 
         jLabelSeleccionaAccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabelSeleccionaAccion.setText("Selecciona una accion a realizar:");
+        jPanel1.add(jLabelSeleccionaAccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 142, -1, -1));
 
         jPanelRegistrarActividades.setBackground(new java.awt.Color(42, 62, 169));
         jPanelRegistrarActividades.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -165,6 +142,8 @@ public class indexSupervisor extends javax.swing.JFrame {
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
+
+        jPanel1.add(jPanelRegistrarActividades, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 211, -1, -1));
 
         jPanelConsultas.setBackground(new java.awt.Color(42, 62, 169));
         jPanelConsultas.setPreferredSize(new java.awt.Dimension(170, 49));
@@ -209,34 +188,15 @@ public class indexSupervisor extends javax.swing.JFrame {
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jPanelRegistrarActividades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelSeleccionaAccion)
-                .addGap(145, 145, 145))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
-                .addComponent(jLabelSeleccionaAccion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelRegistrarActividades, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelConsultas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28))
-        );
+        jPanel1.add(jPanelConsultas, new org.netbeans.lib.awtextra.AbsoluteConstraints(314, 211, -1, -1));
+
+        jComboBoxIdioma.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Español", "Inglés" }));
+        jComboBoxIdioma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxIdiomaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBoxIdioma, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 291, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -285,6 +245,11 @@ public class indexSupervisor extends javax.swing.JFrame {
         new ConsultasSupervisor(user, idiomaSistema).setVisible(true);
     }//GEN-LAST:event_jPanelConsultasMouseClicked
 
+    private void jComboBoxIdiomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxIdiomaActionPerformed
+        String itemSeleccionado = jComboBoxIdioma.getSelectedItem().toString();
+        cambiarIdioma(itemSeleccionado);
+    }//GEN-LAST:event_jComboBoxIdiomaActionPerformed
+
     public void cambiarIdioma(String idioma) {
         gestionIdiomas = new GestionIdiomas(idioma);
         jLabelBienvenido.setText(gestionIdiomas.getProperty("bienvenido"));
@@ -299,6 +264,7 @@ public class indexSupervisor extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBoxIdioma;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;

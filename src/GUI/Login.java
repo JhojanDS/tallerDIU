@@ -325,7 +325,7 @@ public class Login extends javax.swing.JFrame {
         var u = new Usuario(1, "123", "Jhojan", "Supervisor", null);
         this.usuarios.add(u);
 
-        var a = new Actividad("reunión", "reuniones necesarias..", 2, "No completada", 4);
+        var a = new Actividad("reunión", "reuniones necesarias..", 2, "Completada", 4);
         var a1 = new Actividad("desarrollo de producto", "...", 5, "No completada", 8);
         var a2 = new Actividad("analisis", "...", 6, "No completada", 8);
         var a3 = new Actividad("pruebas", "...", 6, "No completada", 8);
@@ -360,13 +360,14 @@ public class Login extends javax.swing.JFrame {
             }
             if (usuarioValido) {
 
-                if (user.getRol().equals("Trabajador")) {
+                if (user.getRol().equals("Supervisor")) {
 
                     this.dispose();
                     new indexSupervisor(user, idiomaSistema).setVisible(true);
 
                 } else {
 
+                    System.out.println(user);
                     this.dispose();
                     new indexTrabajador(user, idiomaSistema).setVisible(true);
 
