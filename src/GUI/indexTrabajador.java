@@ -14,7 +14,7 @@ import utils.GestionIdiomas;
  *
  * @author Estudiante
  */
-public class indexSupervisor extends javax.swing.JFrame {
+public class indexTrabajador extends javax.swing.JFrame {
 
     private GestionIdiomas gestionIdiomas;
     private Usuario user;
@@ -23,7 +23,7 @@ public class indexSupervisor extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-    public indexSupervisor(Usuario user, String idiomaSistema) {
+    public indexTrabajador(Usuario user, String idiomaSistema) {
 
         initComponents();
 
@@ -51,9 +51,6 @@ public class indexSupervisor extends javax.swing.JFrame {
         jLabelSalir = new javax.swing.JLabel();
         jLabelLogout = new javax.swing.JLabel();
         jLabelSeleccionaAccion = new javax.swing.JLabel();
-        jPanelRegistrarActividades = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabelRegistrarActividades = new javax.swing.JLabel();
         jPanelConsultas = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabelConsultas = new javax.swing.JLabel();
@@ -94,7 +91,7 @@ public class indexSupervisor extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelBienvenido)
                 .addGap(18, 18, 18)
                 .addComponent(jLabelNombreUser, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -123,48 +120,6 @@ public class indexSupervisor extends javax.swing.JFrame {
 
         jLabelSeleccionaAccion.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabelSeleccionaAccion.setText("Selecciona una accion a realizar:");
-
-        jPanelRegistrarActividades.setBackground(new java.awt.Color(42, 62, 169));
-        jPanelRegistrarActividades.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jPanelRegistrarActividadesMouseMoved(evt);
-            }
-        });
-        jPanelRegistrarActividades.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanelRegistrarActividadesMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanelRegistrarActividadesMouseExited(evt);
-            }
-        });
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
-
-        jLabelRegistrarActividades.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabelRegistrarActividades.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRegistrarActividades.setText("Registrar actividades");
-
-        javax.swing.GroupLayout jPanelRegistrarActividadesLayout = new javax.swing.GroupLayout(jPanelRegistrarActividades);
-        jPanelRegistrarActividades.setLayout(jPanelRegistrarActividadesLayout);
-        jPanelRegistrarActividadesLayout.setHorizontalGroup(
-            jPanelRegistrarActividadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRegistrarActividadesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelRegistrarActividades)
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-        jPanelRegistrarActividadesLayout.setVerticalGroup(
-            jPanelRegistrarActividadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRegistrarActividadesLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(jPanelRegistrarActividadesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelRegistrarActividades, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
 
         jPanelConsultas.setBackground(new java.awt.Color(42, 62, 169));
         jPanelConsultas.setPreferredSize(new java.awt.Dimension(170, 49));
@@ -203,9 +158,9 @@ public class indexSupervisor extends javax.swing.JFrame {
             jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelConsultasLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelConsultas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -215,15 +170,14 @@ public class indexSupervisor extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jPanelRegistrarActividades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelSeleccionaAccion)
-                .addGap(145, 145, 145))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelSeleccionaAccion)
+                        .addGap(145, 145, 145))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(175, 175, 175))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,18 +185,19 @@ public class indexSupervisor extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
                 .addComponent(jLabelSeleccionaAccion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelRegistrarActividades, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelConsultas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(jPanelConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -258,14 +213,6 @@ public class indexSupervisor extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabelSalirMouseClicked
 
-    private void jPanelRegistrarActividadesMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRegistrarActividadesMouseMoved
-        jPanelRegistrarActividades.setBackground(new Color(67, 91, 220));
-    }//GEN-LAST:event_jPanelRegistrarActividadesMouseMoved
-
-    private void jPanelRegistrarActividadesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRegistrarActividadesMouseExited
-        jPanelRegistrarActividades.setBackground(new Color(42,62,169));
-    }//GEN-LAST:event_jPanelRegistrarActividadesMouseExited
-
     private void jPanelConsultasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelConsultasMouseMoved
         jPanelConsultas.setBackground(new Color(67, 91, 220));
     }//GEN-LAST:event_jPanelConsultasMouseMoved
@@ -273,12 +220,6 @@ public class indexSupervisor extends javax.swing.JFrame {
     private void jPanelConsultasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelConsultasMouseExited
         jPanelConsultas.setBackground(new Color(42,62,169));
     }//GEN-LAST:event_jPanelConsultasMouseExited
-
-    private void jPanelRegistrarActividadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelRegistrarActividadesMouseClicked
-     
-        new RegistrarActividades(user, idiomaSistema).setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jPanelRegistrarActividadesMouseClicked
 
     private void jPanelConsultasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelConsultasMouseClicked
         this.dispose();
@@ -290,7 +231,6 @@ public class indexSupervisor extends javax.swing.JFrame {
         jLabelBienvenido.setText(gestionIdiomas.getProperty("bienvenido"));
         jLabelLogout.setText(gestionIdiomas.getProperty("salir"));
         jLabelSeleccionaAccion.setText(gestionIdiomas.getProperty("selecciona_accion"));
-        jLabelRegistrarActividades.setText(gestionIdiomas.getProperty("registrar_actividades"));
         jLabelConsultas.setText(gestionIdiomas.getProperty("consultas"));
     }
 
@@ -300,19 +240,16 @@ public class indexSupervisor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelBienvenido;
     private javax.swing.JLabel jLabelConsultas;
     private javax.swing.JLabel jLabelLogout;
     private javax.swing.JLabel jLabelNombreUser;
-    private javax.swing.JLabel jLabelRegistrarActividades;
     private javax.swing.JLabel jLabelSalir;
     private javax.swing.JLabel jLabelSeleccionaAccion;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelConsultas;
-    private javax.swing.JPanel jPanelRegistrarActividades;
     // End of variables declaration//GEN-END:variables
 
 }

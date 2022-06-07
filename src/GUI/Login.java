@@ -360,7 +360,7 @@ public class Login extends javax.swing.JFrame {
             }
             if (usuarioValido) {
 
-                if (user.getRol().equals("Supervisor")) {
+                if (user.getRol().equals("Trabajador")) {
 
                     this.dispose();
                     new indexSupervisor(user, idiomaSistema).setVisible(true);
@@ -368,7 +368,7 @@ public class Login extends javax.swing.JFrame {
                 } else {
 
                     this.dispose();
-                    new indexSupervisor(user, idiomaSistema).setVisible(true);
+                    new indexTrabajador(user, idiomaSistema).setVisible(true);
 
                 }
             } else {
